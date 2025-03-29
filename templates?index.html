@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quotex Signals Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        table { width: 80%; margin: 20px auto; border-collapse: collapse; }
+        th, td { padding: 10px; text-align: center; border: 1px solid #ddd; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Quotex Signals Dashboard</h1>
+    <table>
+        <tr>
+            <th>Timeframe</th>
+            <th>Next Candle</th>
+            <th>Confidence</th>
+        </tr>
+        {% for signal in signals %}
+        <tr>
+            <td>{{ signal.timeframe }}</td>
+            <td>{{ signal.candle }}</td>
+            <td>{{ signal.confidence }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
